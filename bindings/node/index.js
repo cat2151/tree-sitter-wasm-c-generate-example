@@ -10,7 +10,7 @@ try {
     if (error2.code !== 'MODULE_NOT_FOUND') {
       throw error2;
     }
-    throw error1
+    throw error1;
   }
 }
 

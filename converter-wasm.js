@@ -11,7 +11,6 @@
  * Example: C-F-G-C → 1,4,5,1
  */
 
-const fs = require('fs');
 const path = require('path');
 
 // Note to number mapping (C=1, D=2, ..., B=7)

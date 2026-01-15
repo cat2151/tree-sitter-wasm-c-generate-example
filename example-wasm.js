@@ -1,5 +1,4 @@
 const TreeSitter = require('web-tree-sitter');
-const fs = require('fs');
 const path = require('path');
 
 // Note to number mapping
