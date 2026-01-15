@@ -1,0 +1,1 @@
+# tree-sitter-wasm-c-generate-example
