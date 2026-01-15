@@ -1,0 +1,40 @@
+{
+  "name": "tree-sitter-wasm-c-generate-example",
+  "version": "1.0.0",
+  "description": "Tree-sitter parser example for musical notes",
+  "main": "converter-wasm.js",
+  "scripts": {
+    "generate": "tree-sitter generate grammar/grammar.js",
+    "build-wasm": "tree-sitter build --wasm && mkdir -p dist && mv tree-sitter-musical_notes.wasm dist/parser.wasm",
+    "build-native": "node-gyp rebuild",
+    "build": "npm run generate && npm run build-wasm",
+    "test": "node converter-wasm.js",
+    "parse": "tree-sitter parse"
+  },
+  "keywords": [
+    "tree-sitter",
+    "parser",
+    "musical-notes"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-addon-api": "^8.5.0",
+    "node-gyp": "^12.1.0",
+    "tree-sitter-cli": "^0.26.3"
+  },
+  "tree-sitter": [
+    {
+      "scope": "source.musical_notes",
+      "file-types": [
+        "notes"
+      ],
+      "path": ".",
+      "grammar": "grammar/grammar.js"
+    }
+  ],
+  "dependencies": {
+    "tree-sitter": "^0.25.0",
+    "web-tree-sitter": "^0.26.3"
+  }
+}
